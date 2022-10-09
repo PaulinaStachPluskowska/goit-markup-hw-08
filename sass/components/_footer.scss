@@ -1,0 +1,220 @@
+.footer {
+  background: $background-dark-color;
+  min-height: 252px;
+  padding-bottom: 60px;
+
+  &__container {
+    @extend .container;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  &__list {
+    @include list;
+    flex-direction: column;
+    // gap: 60px;
+  }
+  &__element {
+    justify-content: center;
+  }
+  &__element:first-child {
+    margin-bottom: 30px;
+  }
+
+  &__social-links-wrap {
+    margin-top: 60px;
+  }
+
+  &__title {
+    @include heading;
+    color: $text-light-color;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+  &__icon {
+    @include social-media-icon;
+    background-color: $social-links-dark;
+    border-radius: 50%;
+    fill: $background-main-color;
+  }
+}
+
+.footer__form {
+  width: fit-content;
+  height: 86px;
+  margin-right: 0;
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 72px;
+}
+
+.footer__form-email {
+  width: 450px;
+  height: 50px;
+  margin: 0;
+  padding-left: 16px;
+  margin-right: 12px;
+  // margin-left: 20px;
+  // margin-right: 80px;
+  border: 1px solid $border-email;
+  filter: drop-shadow($button-shadow);
+  border-radius: 4px;
+  background-color: inherit;
+  color: $text-light-color;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 400;
+
+  &:hover,
+  &:focus,
+  &:active {
+    outline: none;
+    border: 1px solid $icon-select-color;
+    background-color: inherit;
+    color: $text-light-color;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 400;
+  }
+
+  &::placeholder {
+    font-family: inherit;
+    font-style: inherit;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.25em;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.03em;
+
+    color: $text-placeholder-color;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer__container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .footer__list {
+    text-align: left;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0;
+  }
+  .footer__wrap {
+    display: inline-flex;
+    gap: 150px;
+    justify-content: space-between;
+    margin-bottom: 60px;
+    padding: 0;
+  }
+
+  .footer__element {
+    padding: 0;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 60px;
+    margin-bottom: 0px;
+
+    &:last-child {
+      margin-top: 0px;
+      justify-content: center;
+    }
+    // &:not(:first-child) {
+    //   margin-top: 72px;
+    // }
+    // &:first-child {
+    //   margin-bottom: 0;
+    // }
+  }
+
+  .footer__social-links-wrap {
+    margin-top: 12px;
+  }
+  .footer__title {
+    display: flex;
+    justify-content: center;
+    &--position {
+      margin-top: 0;
+    }
+  }
+
+  .footer__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -30px;
+    width: 100%;
+    margin-bottom: 72px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer {
+    padding-bottom: 0;
+
+    &__container {
+      @include container;
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-start;
+      text-align: left;
+    }
+
+    &__list {
+      text-align: left;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 75px;
+      margin-bottom: 0;
+    }
+
+    &__wrap {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 75px;
+    }
+
+    &__social-links-wrap {
+      margin-top: 72px;
+    }
+
+    &__form-email {
+      margin: 0;
+      margin-right: 12px;
+      max-width: 358px;
+    }
+  }
+
+  .footer__element {
+    padding: 0;
+    margin-bottom: 0;
+    align-items: flex-start;
+    justify-content: space-between;
+    &:not(:first-child) {
+      margin-top: 72px;
+    }
+  }
+  .footer__title:not(:first-of-type) {
+    margin-left: 70px;
+    margin-top: 72px;
+  }
+  .footer__title:last-child {
+    display: block;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+
+  .footer__form {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}

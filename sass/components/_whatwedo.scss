@@ -1,0 +1,44 @@
+@media screen and (min-width: 1200px) {
+  .thumb {
+    @include list;
+    justify-content: center;
+  }
+
+  .thumb__thumb {
+    position: relative;
+    display: flex;
+    bottom: 0;
+    left: 0;
+    margin-bottom: 0px;
+    padding: 0px;
+    height: 100%;
+    width: 100%;
+    border-radius: 0px;
+    z-index: 2;
+
+    & .thumb__label {
+      position: absolute;
+      height: 70px;
+      width: 370px;
+      padding-top: 27px;
+      padding-bottom: 27px;
+      bottom: 0;
+      margin: 0;
+
+      @include flexbox;
+
+      font-family: inherit;
+      font-style: inherit;
+      font-weight: 700;
+      font-size: inherit;
+      line-height: 1.14em;
+      text-align: center;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      background-color: $label-background-color;
+
+      color: $text-light-color;
+      z-index: 2;
+    }
+  }
+}

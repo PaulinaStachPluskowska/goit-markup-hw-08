@@ -1,0 +1,36 @@
+.contact__element {
+  font-family: inherit;
+  font-style: normal;
+  font-size: inherit;
+  line-height: 1.71em;
+  letter-spacing: 0.03em;
+  color: $text-mdllight-color;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+
+  margin-top: 9px;
+  &:not(:last-child) {
+    margin-bottom: 9px;
+  }
+
+  &:active,
+  &:focus,
+  &:hover {
+    color: $link-color;
+    @include transition;
+
+    outline: none;
+  }
+}
+
+.contact__element--color {
+  color: $text-light-color;
+}
+
+@media screen and (min-width: 1200px) {
+  .contact__element {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}

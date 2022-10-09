@@ -1,0 +1,15 @@
+.icon {
+  fill: currentColor;
+
+  &:hover,
+  &:focus {
+    fill: $link-color;
+    border-color: $icon-select-color;
+    transition: 0.2s;
+
+    @include transition;
+    cursor: pointer;
+
+    outline: none;
+  }
+}

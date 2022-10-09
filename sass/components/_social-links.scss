@@ -1,0 +1,37 @@
+.section__social-links {
+  @include flexbox;
+  // width: 206px;
+  // height: 44px;
+  gap: 10px;
+  background-color: inherit;
+  margin-top: 16px;
+  margin-bottom: 24px;
+}
+
+.section__social-link-icon {
+  @include social-media-icon;
+  background-color: $background-main-color;
+  fill: $icon-color;
+
+  &:hover,
+  &:focus {
+    background-color: $icon-select-color;
+    fill: $background-main-color;
+    transition: 0.2s;
+    @include transition;
+    outline: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .section__social-link {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .section__social-link {
+    display: flex;
+    margin-bottom: 30px;
+  }
+}

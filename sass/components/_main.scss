@@ -1,0 +1,90 @@
+.main {
+  background: inherit;
+  margin-left: inherit;
+  margin-right: inherit;
+  margin-bottom: 0px;
+
+  &__wrapper {
+    background-color: $background-main-color;
+    @include flexbox;
+    min-height: 400px;
+    background-image: linear-gradient(($background-gradient-first, $background-gradient-first)), url("../../images/backgroundmob.jpg");
+    background-size: 1600px 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-width: 320px;
+    // max-width: 1600px;
+    width: 100%;
+    // margin: 0 auto;
+    gap: 30px;
+    // flex-direction: column;
+  }
+
+  &__container {
+    @include flexbox;
+    flex-direction: column;
+    @extend .container;
+  }
+
+  &__title {
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 1.6;
+    color: $text-light-color;
+    text-align: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    margin-top: 118px;
+    text-transform: uppercase;
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .main__wrapper {
+    background-image: linear-gradient(($background-gradient-first, $background-gradient-first)), url("../../images/backgroundmob@2x.jpg");
+    background-size: 1600px 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-width: 320px;
+    @include flexbox;
+    min-height: 400px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .main__wrapper {
+    background-image: linear-gradient(($background-gradient-first, $background-gradient-first)), url("../../images/backgroundtab.jpg");
+    background-size: cover;
+  }
+  .main__title {
+    font-size: 44px;
+    line-height: 1.36;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) and (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .main__wrapper {
+    background-image: linear-gradient(($background-gradient-first, $background-gradient-first)), url("../../images/backgroundtab@2x.jpg");
+    background-size: cover;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .main__wrapper {
+    background-image: linear-gradient(($background-gradient-first, $background-gradient-first)), url("../../images/background.jpg");
+    background-size: cover;
+  }
+  .main__title {
+    font-size: 44px;
+    line-height: 1.36;
+    margin: 0;
+    padding: 0;
+    margin-top: 200px;
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .main__wrapper {
+    background-image: linear-gradient(($background-gradient-first, $background-gradient-first)), url("../../images/background@2x.jpg");
+    background-size: cover;
+  }
+}

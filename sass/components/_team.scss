@@ -1,0 +1,99 @@
+.team {
+  @extend .section;
+  background: $background-light-color;
+  width: 100%;
+  display: flex;
+
+  &__container {
+    @extend .container;
+  }
+
+  &__title {
+    @include heading;
+    font-size: 28px;
+    line-height: 1.178em;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: inherit;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    text-transform: none;
+  }
+
+  &__list {
+    @include list;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__element {
+    background: $background-main-color;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+    justify-content: center;
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  &__name {
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.187em;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: inherit;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+
+  &__position {
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.18em;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $text-dark-color;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .team__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  .team__element {
+    flex-basis: calc((100% - 30px) / 2);
+    display: block;
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .team {
+    &__container {
+      @include container;
+    }
+    &__title {
+      font-size: 36px;
+      margin-bottom: 50px;
+    }
+    &__list {
+      @include list;
+      justify-content: center;
+      gap: 30px;
+    }
+    &__element {
+      display: inline-block;
+      align-self: center;
+      flex-basis: calc((100% - 90px) / 4);
+    }
+  }
+}

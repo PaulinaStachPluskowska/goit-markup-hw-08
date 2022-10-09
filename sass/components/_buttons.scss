@@ -1,0 +1,167 @@
+.button {
+  @include button;
+
+  &:active,
+  &:focus,
+  &:hover {
+    background: $background-main-color;
+    color: inherit;
+    @include transition;
+    cursor: pointer;
+
+    outline: none;
+  }
+}
+
+.main__button {
+  @include button;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87em;
+  @include flexbox;
+  letter-spacing: 0.06em;
+  color: $text-light-color;
+
+  margin: 30px 500px 200px 500px;
+
+  &:active,
+  &:focus,
+  &:hover {
+    background: $background-main-color;
+    color: inherit;
+    @include transition;
+    cursor: pointer;
+
+    outline: none;
+  }
+}
+
+.footer__form-button {
+  @include button;
+  margin: 0;
+  padding: 10px 28px 10px 42px;
+
+  &:active .footer__form-signin,
+  &:focus .footer__form-signin,
+  &:hover .footer__form-signin {
+    background: $background-main-color;
+    color: inherit;
+    @include transition;
+    cursor: pointer;
+  }
+
+  &:active,
+  &:focus,
+  &:hover {
+    background: $background-main-color;
+    color: inherit;
+    @include transition;
+    cursor: pointer;
+    outline: none;
+  }
+
+  &:active .footer__send-icon,
+  &:focus .footer__send-icon,
+  &:hover .footer__send-icon {
+    fill: $icon-select-color;
+    @include transition;
+    cursor: pointer;
+  }
+  margin-top: 20px;
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__form-button {
+    margin-top: 0;
+    margin-right: 12px;
+  }
+}
+
+.footer__form-signin {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  font-style: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88em;
+  letter-spacing: 0.06em;
+
+  color: $text-light-color;
+}
+
+.footer__send-icon {
+  display: flex;
+
+  align-items: center;
+  width: 24px;
+  height: 24px;
+
+  padding: 0;
+  color: $text-light-color;
+}
+
+.modal__close-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  background-color: $background-main-color;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  &:hover,
+  &:focus {
+    border: 1px solid $icon-select-color;
+    outline: none;
+    transform: scale(1.5);
+    @include transition;
+  }
+}
+
+.modal__close-button-icon:hover,
+.modal__close-button-icon:focus {
+  fill: $icon-select-color;
+  @include transition;
+}
+
+.send-button {
+  @include button;
+  @include flexbox;
+  font-family: inherit;
+  font-style: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88em;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: $text-light-color;
+  margin: 31px 85px 40px;
+  padding: 0;
+
+  &:active,
+  &:focus,
+  &:hover {
+    background: $background-main-color;
+
+    outline: none;
+    color: inherit;
+    @include transition;
+    cursor: pointer;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .send-button {
+    margin: 30px 124px 40px;
+    justify-content: center;
+  }
+}

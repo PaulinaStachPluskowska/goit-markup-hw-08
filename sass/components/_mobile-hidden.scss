@@ -1,0 +1,26 @@
+.mobile-hidden {
+  display: none;
+}
+
+@media screen and (min-width: 1200px) {
+  .mobile-hidden {
+    display: block;
+    @include section;
+    &__container {
+      @include container;
+    }
+    &__title {
+      @include heading;
+      font-size: 36px;
+      line-height: 1.17em;
+      text-align: center;
+      letter-spacing: 0.03em;
+      color: inherit;
+      margin-top: 0;
+      margin-bottom: 50px;
+    }
+    &__background {
+      background-color: $background-main-color;
+    }
+  }
+}

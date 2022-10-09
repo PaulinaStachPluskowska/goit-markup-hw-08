@@ -1,0 +1,133 @@
+.portfolio {
+  @extend .container;
+  max-width: 1200px;
+  padding-top: 0;
+}
+
+.portfolio__image {
+  display: block;
+  height: 100%;
+  max-width: 450px;
+  object-fit: fill;
+}
+
+.portfolio__list {
+  @include list;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  padding-bottom: 60px;
+}
+
+.portfolio__box {
+  background: $background-main-color;
+  border-bottom: 1px solid $border-color;
+  justify-content: center;
+  max-width: max-content;
+
+  &:hover {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    cursor: pointer;
+    @include transition;
+
+    outline: none;
+  }
+
+  &:hover .portfolio__overlay {
+    transform: translateY(0);
+
+    @include transition;
+  }
+}
+
+.portfolio__box > figure {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.portfolio__overlay-wrap {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+}
+
+.portfolio__title {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2em;
+  letter-spacing: 0.06em;
+  color: inherit;
+
+  margin: 20px 24px 4px 24px;
+}
+
+.portfolio__field {
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 1.88em;
+  letter-spacing: 0.03em;
+  margin: 4px 24px 20px 24px;
+
+  color: $text-dark-color;
+}
+
+.portfolio__overlay {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+
+  transform: translateY(100%);
+
+  @include transition;
+}
+
+.portfolio__overlay-description {
+  position: relative;
+  width: 370px;
+  height: 294px;
+  margin: 0;
+  padding: 49px 45px 49px 24px;
+  background-color: $overlay-color;
+
+  font-family: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  font-size: 18px;
+  line-height: 1.56em;
+
+  letter-spacing: 0.03em;
+  color: $text-light-color;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .portfolio__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    // &:last-child {
+    //   justify-content: left;
+    // }
+  }
+  .portfolio__box {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .portfolio__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .portfolio__box {
+    flex-basis: calc((100% - 60px) / 3);
+  }
+}

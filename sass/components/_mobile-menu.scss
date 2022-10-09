@@ -1,0 +1,146 @@
+.mobile__container {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  min-width: 320px;
+  min-height: 100%;
+  top: 0;
+  left: 0;
+  background-color: $background-main-color;
+  transform: translateX(-250%);
+  transition: transform 1s;
+  z-index: 2;
+  @include transition;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
+  padding: 48px 40px;
+}
+
+.is-open {
+  transform: translateX(0);
+}
+
+// .js-close-menu,
+// .js-open-menu {
+//   cursor: pointer;
+// }
+
+.mobile__menu-toggle {
+  position: absolute;
+  outline: none;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  top: 21px;
+  right: 25px;
+}
+
+.mobile__icon {
+  position: relative;
+  @include flexbox;
+  &:focus,
+  &:hover {
+    fill: $icon-select-color;
+    cursor: pointer;
+  }
+}
+
+.mobile__menu {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 36px;
+}
+
+.mobile__link {
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.17em;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  color: $text-main-color;
+  &:hover,
+  &:focus {
+    color: $link-color;
+  }
+  &--current-page {
+    color: $link-color;
+  }
+}
+
+.mobile__contact {
+  position: absolute;
+  bottom: 134px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.mobile__element {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.67em;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  color: $text-dark-color;
+
+  &--style {
+    font-size: 34px;
+    line-height: 1.17em;
+    color: $link-color;
+  }
+
+  &:hover,
+  &:focus {
+    color: $link-color;
+  }
+}
+
+.mobile__social {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  bottom: 48px;
+  gap: 20px;
+}
+
+.mobile__socialm {
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22em;
+  letter-spacing: 0.02em;
+  color: $link-color;
+  text-decoration: none;
+
+  &:not(:last-child) {
+    position: absolute;
+    padding-right: 10px;
+    border-right: 1px solid rgba(153, 151, 151, 0.75);
+  }
+
+  &::after {
+    position: absolute;
+    display: inline-block;
+    content: "";
+    width: 0.5px;
+    height: 22px;
+    margin-left: 10px;
+    border-radius: 2px;
+    background-color: rgba(33, 33, 33, 0.2);
+  }
+}
+
+@media (min-width: 768px) {
+  .mobile__menu-toggle {
+    display: none;
+  }
+}

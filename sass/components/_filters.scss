@@ -1,0 +1,135 @@
+.filters {
+  @extend .container;
+}
+
+.filters__wrap {
+  @include section;
+  background: inherit;
+  padding: 60px 0 25px 0;
+  margin: 0 0 40px 0;
+}
+
+.filters__list {
+  @include list;
+  justify-content: left;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  margin-right: 58px;
+  gap: 8px;
+}
+
+.filters__item {
+  margin-bottom: 15px;
+  flex-basis: calc((100% - 16px) / 3);
+  max-width: fit-content;
+  max-height: fit-content;
+}
+
+.filters__button {
+  display: flex;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: inherit;
+
+  background: $background-light-color;
+  border-radius: 4px;
+  border-style: none;
+  justify-content: center;
+  padding: 6px 22px;
+
+  &--first {
+    width: 103px;
+  }
+  &--second {
+    width: 128px;
+  }
+  &--third {
+    width: 145px;
+  }
+
+  &:active,
+  &:focus,
+  &:hover {
+    background: $link-color;
+    color: $text-light-color;
+    @include transition;
+    cursor: pointer;
+
+    outline: none;
+  }
+
+  &:focus,
+  &:hover {
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+    @include transition;
+
+    outline: none;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .filters__list {
+    @include list;
+    justify-content: left;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    gap: 8px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .filters__wrap {
+    @include section;
+    padding: 0;
+    margin: 0 0 40px 0;
+    display: flex;
+    justify-content: center;
+  }
+  .filters__list {
+    @include list;
+    justify-content: center;
+    padding: 0;
+    padding-bottom: 16px;
+    margin: 60px 45px 0 45px;
+    gap: 8px;
+  }
+  .filters__item {
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .filters {
+    padding: 0;
+    &__wrap {
+      // @include section;
+      padding-top: 94px;
+      padding-bottom: 94px;
+      padding-left: 15px;
+      padding-right: 15px;
+      margin-top: -94px;
+      margin: 0;
+      padding-bottom: 34px;
+      display: flex;
+      justify-content: center;
+    }
+    &__list {
+      @include list;
+      justify-content: center;
+      padding: 0;
+      padding-bottom: 16px;
+      margin: 0;
+      gap: 8px;
+    }
+    &__item {
+      margin: 0;
+    }
+  }
+}

@@ -1,0 +1,68 @@
+@mixin button {
+  background: $link-color;
+  box-shadow: $button-shadow;
+  border: none;
+  border-radius: 4px;
+  width: 200px;
+  height: 50px;
+}
+
+@mixin transition {
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@mixin list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+}
+@mixin listb {
+  list-style-type: none;
+  // display: flex;
+  // flex-direction: row;
+  gap: 30px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+@mixin flexbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin heading {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: inherit;
+  text-transform: uppercase;
+}
+
+@mixin social-media-icon {
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 50%;
+}
+
+@mixin section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: -94px;
+}
+
+@mixin container {
+  width: 1200px;
+  margin: 0 auto;
+}
